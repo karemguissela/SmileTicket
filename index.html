@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile Ticket - Selecciona y Reserva</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header img {
+            width: 100%;
+            max-height: 180px;
+            object-fit: cover;
+        }
+        h1 {
+            color: #b30000;
+            margin-top: 20px;
+            font-size: 24px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 12px;
+            max-width: 90%;
+            margin: 25px auto;
+        }
+        .cell {
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+        .reservado {
+            background-color: #d9d9d9;
+            color: #666;
+        }
+        .disponible {
+            background-color: #b30000;
+            color: white;
+        }
+        .alias {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        form {
+            background: #ffffff;
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #b30000;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff1a1a;
+        }
+        .agradecimiento {
+            display: none;
+            margin: 30px auto;
+            max-width: 500px;
+            background-color: #eaf6ea;
+            color: #2d662d;
+            border: 1px solid #a6d8a8;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        footer {
+            font-size: 13px;
+            color: #666;
+            margin: 30px 10px;
+        }
+    </style>
+    <script>
+        function mostrarAgradecimiento() {
+            document.getElementById('formulario').style.display = 'none';
+            document.getElementById('mensajeGracias').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+       <img src="encabezado.png" alt="Smile Ticket" style="width: 100%; max-height: 180px; object-fit: cover;">
+
+    </header>
+    <h1>Smile Ticket 🎟️</h1>
+    <p>Selecciona tu número favorito para participar</p>
+    <div class="grid">
+
+        <div class="cell disponible">
+            1
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            2
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell reservado">
+            3
+            <div class="alias">👤 Carla</div>
+        </div>
+        
+        <div class="cell disponible">
+            4
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            5
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            6
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            7
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            8
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            9
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            10
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            11
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell reservado">
+            12
+            <div class="alias">👤 Luis</div>
+        </div>
+        
+        <div class="cell disponible">
+            13
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            14
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            15
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            16
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            17
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            18
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            19
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            20
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            21
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell reservado">
+            22
+            <div class="alias">👤 Anita</div>
+        </div>
+        
+        <div class="cell disponible">
+            23
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            24
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            25
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            26
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            27
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            28
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            29
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            30
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            31
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            32
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            33
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            34
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            35
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            36
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            37
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            38
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            39
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            40
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            41
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            42
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            43
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            44
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell reservado">
+            45
+            <div class="alias">👤 Jorge</div>
+        </div>
+        
+        <div class="cell disponible">
+            46
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            47
+            <div class="alias">Disponible</div>
+        </div>
+        
+        <div class="cell disponible">
+            48
+            <div class="alias">Disponible</div>
+        </div>
+        
+    </div>
+    <h2>Reserva tu número</h2>
+    <div id="formulario">
+        <form action="https://formsubmit.co/kshfcperu@gmail.com" method="POST" onsubmit="mostrarAgradecimiento()">
+            <input type="text" name="nombre" placeholder="Tu nombre o alias" required>
+            <input type="text" name="numero_ticket" placeholder="Número elegido" required>
+            <input type="text" name="operacion_yape" placeholder="N° de operación de Yape" required>
+            <textarea name="mensaje_adicional" placeholder="Mensaje adicional (opcional)"></textarea>
+            <input type="hidden" name="_captcha" value="true">
+            <button type="submit">Enviar reserva</button>
+        </form>
+    </div>
+    <div class="agradecimiento" id="mensajeGracias">
+        <h3>¡Gracias por tu reserva! 💌</h3>
+        <p>Tu información ha sido enviada correctamente. El número será marcado como reservado una vez que las administradoras verifiquen el pago.<br><br><strong>Gracias por participar.</strong><br>El sorteo será el <strong>domingo 1 de junio</strong> a las <strong>10:50 p.m.</strong> como puede verlo en la transmisión oficial.</p>
+    </div>
+    <footer>
+        Una vez reservado, se verificará el pago y se marcará como reservado el número enviado.
+    </footer>
+</body>
+</html>
