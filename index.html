@@ -50,61 +50,16 @@
             font-size: 12px;
             margin-top: 5px;
         }
-        form {
-            background: #ffffff;
-            max-width: 400px;
-            margin: 40px auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 14px;
-        }
-        button {
-            background-color: #b30000;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            font-size: 16px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #ff1a1a;
-        }
-        .agradecimiento {
-            display: none;
-            margin: 30px auto;
-            max-width: 500px;
-            background-color: #eaf6ea;
-            color: #2d662d;
-            border: 1px solid #a6d8a8;
-            border-radius: 10px;
-            padding: 20px;
-        }
         footer {
             font-size: 13px;
             color: #666;
             margin: 30px 10px;
         }
     </style>
-    <script>
-        function mostrarAgradecimiento() {
-            document.getElementById('formulario').style.display = 'none';
-            document.getElementById('mensajeGracias').style.display = 'block';
-        }
-    </script>
 </head>
 <body>
     <header>
-       <img src="encabezado.png" alt="Smile Ticket" style="width: 100%; max-height: 180px; object-fit: cover;">
-
+        <img src="encabezado.png" alt="Smile Ticket">
     </header>
     <h1>Smile Ticket 🎟️</h1>
     <p>Selecciona tu número favorito para participar</p>
@@ -120,9 +75,9 @@
             <div class="alias">Disponible</div>
         </div>
         
-        <div class="cell reservado">
+        <div class="cell disponible">
             3
-            <div class="alias">👤 Carla</div>
+            <div class="alias">Disponible</div>
         </div>
         
         <div class="cell disponible">
@@ -140,9 +95,9 @@
             <div class="alias">Disponible</div>
         </div>
         
-        <div class="cell disponible">
+        <div class="cell reservado">
             7
-            <div class="alias">Disponible</div>
+            <div class="alias">👤 Cami</div>
         </div>
         
         <div class="cell disponible">
@@ -165,9 +120,9 @@
             <div class="alias">Disponible</div>
         </div>
         
-        <div class="cell reservado">
+        <div class="cell disponible">
             12
-            <div class="alias">👤 Luis</div>
+            <div class="alias">Disponible</div>
         </div>
         
         <div class="cell disponible">
@@ -180,9 +135,9 @@
             <div class="alias">Disponible</div>
         </div>
         
-        <div class="cell disponible">
+        <div class="cell reservado">
             15
-            <div class="alias">Disponible</div>
+            <div class="alias">👤 Lore</div>
         </div>
         
         <div class="cell disponible">
@@ -210,14 +165,14 @@
             <div class="alias">Disponible</div>
         </div>
         
-        <div class="cell disponible">
+        <div class="cell reservado">
             21
-            <div class="alias">Disponible</div>
+            <div class="alias">👤 Fiore</div>
         </div>
         
-        <div class="cell reservado">
+        <div class="cell disponible">
             22
-            <div class="alias">👤 Anita</div>
+            <div class="alias">Disponible</div>
         </div>
         
         <div class="cell disponible">
@@ -250,9 +205,9 @@
             <div class="alias">Disponible</div>
         </div>
         
-        <div class="cell disponible">
+        <div class="cell reservado">
             29
-            <div class="alias">Disponible</div>
+            <div class="alias">👤 Clau</div>
         </div>
         
         <div class="cell disponible">
@@ -265,9 +220,9 @@
             <div class="alias">Disponible</div>
         </div>
         
-        <div class="cell disponible">
+        <div class="cell reservado">
             32
-            <div class="alias">Disponible</div>
+            <div class="alias">👤 Gise</div>
         </div>
         
         <div class="cell disponible">
@@ -300,9 +255,9 @@
             <div class="alias">Disponible</div>
         </div>
         
-        <div class="cell disponible">
+        <div class="cell reservado">
             39
-            <div class="alias">Disponible</div>
+            <div class="alias">👤 Nico</div>
         </div>
         
         <div class="cell disponible">
@@ -315,9 +270,9 @@
             <div class="alias">Disponible</div>
         </div>
         
-        <div class="cell disponible">
+        <div class="cell reservado">
             42
-            <div class="alias">Disponible</div>
+            <div class="alias">👤 Vane</div>
         </div>
         
         <div class="cell disponible">
@@ -330,9 +285,9 @@
             <div class="alias">Disponible</div>
         </div>
         
-        <div class="cell reservado">
+        <div class="cell disponible">
             45
-            <div class="alias">👤 Jorge</div>
+            <div class="alias">Disponible</div>
         </div>
         
         <div class="cell disponible">
@@ -340,9 +295,9 @@
             <div class="alias">Disponible</div>
         </div>
         
-        <div class="cell disponible">
+        <div class="cell reservado">
             47
-            <div class="alias">Disponible</div>
+            <div class="alias">👤 Ali</div>
         </div>
         
         <div class="cell disponible">
@@ -351,23 +306,26 @@
         </div>
         
     </div>
-    <h2>Reserva tu número</h2>
-    <div id="formulario">
-        <form action="https://formsubmit.co/kshfcperu@gmail.com" method="POST" onsubmit="mostrarAgradecimiento()">
-            <input type="text" name="nombre" placeholder="Tu nombre o alias" required>
-            <input type="text" name="numero_ticket" placeholder="Número elegido" required>
-            <input type="text" name="operacion_yape" placeholder="N° de operación de Yape" required>
-            <textarea name="mensaje_adicional" placeholder="Mensaje adicional (opcional)"></textarea>
-            <input type="hidden" name="_captcha" value="true">
-            <button type="submit">Enviar reserva</button>
-        </form>
-    </div>
-    <div class="agradecimiento" id="mensajeGracias">
-        <h3>¡Gracias por tu reserva! 💌</h3>
-        <p>Tu información ha sido enviada correctamente. El número será marcado como reservado una vez que las administradoras verifiquen el pago.<br><br><strong>Gracias por participar.</strong><br>El sorteo será el <strong>domingo 1 de junio</strong> a las <strong>10:50 p.m.</strong> como puede verlo en la transmisión oficial.</p>
-    </div>
     <footer>
         Una vez reservado, se verificará el pago y se marcará como reservado el número enviado.
     </footer>
+    
+<div style="margin: 40px auto; max-width: 800px;">
+    <iframe
+      id="JotFormIFrame-251477697664071"
+      title="Reserva tu número – Smile Ticket Perú"
+      onload="window.parent.scrollTo(0,0)"
+      allowtransparency="true"
+      allow="geolocation; microphone; camera; fullscreen; payment"
+      src="https://form.jotform.com/251477697664071"
+      frameborder="0"
+      style="min-width:100%;max-width:100%;height:539px;border:none;"
+      scrolling="no"
+    >
+    </iframe>
+    <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-251477697664071']", "https://form.jotform.com/")</script>
+</div>
+
 </body>
 </html>
